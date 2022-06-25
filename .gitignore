@@ -1,9 +1,2 @@
-*~
-.DS_Store
-.svn
-.cvs
-*.bak
-*.swp
-Thumbs.db
 .env
 node_modules/
