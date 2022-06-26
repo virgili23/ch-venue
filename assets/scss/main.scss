@@ -1,0 +1,94 @@
+@import "reset";
+@import "variables";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    // font-family: 'Lato', sans-serif;
+    // font-family: 'Merriweather', serif;
+    // font-family: 'Oswald', sans-serif;
+}
+
+
+#header {
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    #top-bar {
+        background: white;
+        height:45px;
+        .top-bar-container {
+            display:flex;
+            width:70%;
+            float:right;
+            .get-connected {
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    // padding: 10px 12px;
+                    li {
+                        float:left;
+                        padding:10px 12px;
+                        h4 {
+                            // padding: 12px;
+                            color: $pink;
+                            font-weight:500;
+                        }
+                    }
+                }
+            }
+            .search-bar {
+                width:370px;
+            }
+            .login-container {
+                position: absolute;
+                right:0;
+                background: $pink;
+                width:145px;
+                height:45px;
+                a {
+                    text-decoration: none;
+                    span {
+                        color: $white;
+                    }
+                    img {
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+    .navigation {
+        background: $black;
+        max-height: 100px;
+        .container {
+            .row {
+                .logo {
+                   img {
+                    position: relative;
+                    bottom: 30px;
+                   } 
+                }
+                .navbar {
+                    padding: 0;
+                    &>ul {
+                        display: flex;
+                        flex-direction: row;
+                        width:100%;
+                        &>li {
+                            font-size: 1.3em;
+                            color: $white;
+                            text-align: center;
+                            position: relative;
+                            white-space: nowrap;
+                            width:25%;
+                            padding: 40px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

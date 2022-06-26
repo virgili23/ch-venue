@@ -1,0 +1,130 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#header {
+  text-transform: uppercase;
+  font-family: "Oswald";
+}
+#header #top-bar {
+  background: white;
+  height: 45px;
+}
+#header #top-bar .top-bar-container {
+  display: flex;
+  width: 70%;
+  float: right;
+}
+#header #top-bar .top-bar-container .get-connected ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#header #top-bar .top-bar-container .get-connected ul li {
+  float: left;
+  padding: 10px 12px;
+}
+#header #top-bar .top-bar-container .get-connected ul li h4 {
+  color: #de53f3;
+  font-weight: 500;
+}
+#header #top-bar .top-bar-container .search-bar {
+  width: 370px;
+}
+#header #top-bar .top-bar-container .login-container {
+  position: absolute;
+  right: 0;
+  background: #de53f3;
+  width: 145px;
+  height: 45px;
+}
+#header #top-bar .top-bar-container .login-container a {
+  text-decoration: none;
+}
+#header #top-bar .top-bar-container .login-container a span {
+  color: #ffffff;
+}
+#header #top-bar .top-bar-container .login-container a img {
+  vertical-align: middle;
+}
+#header .navigation {
+  background: #000000;
+  max-height: 100px;
+}
+#header .navigation .container .row .logo img {
+  position: relative;
+  bottom: 30px;
+}
+#header .navigation .container .row .navbar {
+  padding: 0;
+}
+#header .navigation .container .row .navbar > ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#header .navigation .container .row .navbar > ul > li {
+  font-size: 1.3em;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  white-space: nowrap;
+  width: 25%;
+  padding: 40px 0;
+}
+
+/*# sourceMappingURL=styles.css.map */
