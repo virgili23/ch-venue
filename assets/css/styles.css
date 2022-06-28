@@ -94,11 +94,11 @@ table {
   font-size: 20px;
 }
 #header #top-bar .get-connected ul a:hover {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 #header #top-bar .get-connected ul a:hover i.fa-brands {
   color: #de53f3;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 #header #top-bar .get-connected ul a:nth-child(4) li {
   padding: 11px 9px 14px 9px;
@@ -165,7 +165,7 @@ table {
 }
 #header #top-bar .login-container a.login-btn:hover span {
   color: #000000;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 #header .navigation {
   background: #000000;
@@ -193,13 +193,14 @@ table {
   position: relative;
   white-space: nowrap;
   width: 25%;
-  padding: 40px 0;
+  padding: 41px 0;
   color: #ffffff;
   text-decoration: none;
 }
 #header .navigation .container .row .navbar > ul > a:hover {
   color: #de53f3;
-  transition: all 0.2s ease-in-out;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
 }
 
 #events {
@@ -242,7 +243,7 @@ table {
 }
 #events .grid-body .ltg .grid-column {
   width: 100%;
-  height: 200px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -261,12 +262,44 @@ table {
 }
 
 #newsletter {
-  background-image: url("assets/img/newsletter-concert-bg.png");
+  background-image: url("../img/newsletter-concert-bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
+  height: 480px;
   position: relative;
+}
+#newsletter .newsletter-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  width: 600px;
+  margin: auto;
+  padding: 40px 40px;
+}
+#newsletter .newsletter-container h2.newsletter-heading {
+  color: #ffffff;
+  font-family: "Oswald";
+  font-size: 2rem;
+  letter-spacing: 1pt;
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+#newsletter .newsletter-container p.newsletter-info {
+  color: #de53f3;
+  font-family: "Merriweather";
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 1pt;
+}
+#newsletter .newsletter-container a.nl-cta {
+  color: #ffffff;
+  font-family: "Oswald";
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.1rem;
+  letter-spacing: 1.5pt;
+  border: 2px solid #ffffff;
+  padding: 10px 55px;
 }
 
 @media (max-width: 767px) {
