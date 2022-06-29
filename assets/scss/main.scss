@@ -159,7 +159,7 @@ body {
                             text-decoration: none;
                                 &:hover {
                                     color: $pink;
-                                    background-color: $white;
+                                    // background-color: $white;
                                     transition: $btnTransitions;
                                 }
                         }
@@ -209,31 +209,32 @@ body {
     }
 
     .grid-body {
-        .ltg {
+        .artists-container {
+            // transition: $btnTransitions;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 10px;
             margin: 35px 0;
-            .grid-column {
+            .artist-box {
                 width: 100%;
                 height: 300px;
-                display: flex;
-                justify-content: center;
+                // display: flex;
+                // justify-content: center;
                 align-items: center;
                 background: $white;
-                margin: 10px 0;
+                margin-bottom: 10px;
             }
-        }
-    
-        .ltg.list {
-            display: grid;
-            grid-template-columns: 1fr;
-            width: 100%;
-        }
-    
-        .ltg.list div {
-            width: 95%;
-            height: 100px;
-            margin-top: 10px;
+            // Styles for its list variant
+            &.list {
+                display: grid;
+                grid-template-columns: 1fr;
+                width: 100%;
+                .artist-box {
+                    width: 95%;
+                    height: 200px;
+                    margin-top: 10px;
+                }
+            }
         }
     }
 }
@@ -248,27 +249,30 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 480px;
-    position: relative;
+    display: flex;
+    justify-content: center;
     .newsletter-container {
         background-color: rgba(0, 0, 0, 0.7);
         text-align: center;
-        width: 600px;
-        margin: auto;
-        padding: 40px 40px;
+        width: 680px;
+        height:291px;
+        margin: auto 10px;
+        padding: 70px 55px;
         h2.newsletter-heading {
             color: $white;
             font-family: 'Oswald';
-            font-size: 2rem;
+            font-size: 2.9rem;
             letter-spacing: 1pt;
             text-transform: uppercase;
-            margin: 15px 0;
+            margin-bottom: 15px;
         }
         p.newsletter-info {
             color: $pink;
             font-family: 'Merriweather';
             font-style: italic;
-            font-size: 1rem;
+            font-size: 1.1rem;
             letter-spacing: 1pt;
+            margin-bottom: 55px;
         }
         a.nl-cta {
             color: $white;
@@ -279,6 +283,11 @@ body {
             letter-spacing: 1.5pt;
             border: 2px solid $white;
             padding: 10px 55px;
+            &:hover {
+                transition: $btnTransitions;
+                color: $pink;
+                background: $white;
+            }
         }
     }
 }

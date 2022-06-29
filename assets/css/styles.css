@@ -199,7 +199,6 @@ table {
 }
 #header .navigation .container .row .navbar > ul > a:hover {
   color: #de53f3;
-  background-color: #ffffff;
   transition: all 0.3s ease-in-out;
 }
 
@@ -236,28 +235,27 @@ table {
   background-color: #ffffff;
   color: #de53f3;
 }
-#events .grid-body .ltg {
+#events .grid-body .artists-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
   margin: 35px 0;
 }
-#events .grid-body .ltg .grid-column {
+#events .grid-body .artists-container .artist-box {
   width: 100%;
   height: 300px;
-  display: flex;
-  justify-content: center;
   align-items: center;
   background: #ffffff;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
-#events .grid-body .ltg.list {
+#events .grid-body .artists-container.list {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
 }
-#events .grid-body .ltg.list div {
+#events .grid-body .artists-container.list .artist-box {
   width: 95%;
-  height: 100px;
+  height: 200px;
   margin-top: 10px;
 }
 
@@ -267,29 +265,32 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
   height: 480px;
-  position: relative;
+  display: flex;
+  justify-content: center;
 }
 #newsletter .newsletter-container {
   background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
-  width: 600px;
-  margin: auto;
-  padding: 40px 40px;
+  width: 680px;
+  height: 291px;
+  margin: auto 10px;
+  padding: 70px 55px;
 }
 #newsletter .newsletter-container h2.newsletter-heading {
   color: #ffffff;
   font-family: "Oswald";
-  font-size: 2rem;
+  font-size: 2.9rem;
   letter-spacing: 1pt;
   text-transform: uppercase;
-  margin: 15px 0;
+  margin-bottom: 15px;
 }
 #newsletter .newsletter-container p.newsletter-info {
   color: #de53f3;
   font-family: "Merriweather";
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.1rem;
   letter-spacing: 1pt;
+  margin-bottom: 55px;
 }
 #newsletter .newsletter-container a.nl-cta {
   color: #ffffff;
@@ -300,6 +301,11 @@ table {
   letter-spacing: 1.5pt;
   border: 2px solid #ffffff;
   padding: 10px 55px;
+}
+#newsletter .newsletter-container a.nl-cta:hover {
+  transition: all 0.3s ease-in-out;
+  color: #de53f3;
+  background: #ffffff;
 }
 
 @media (max-width: 767px) {

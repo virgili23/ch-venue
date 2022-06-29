@@ -1,16 +1,16 @@
 const list = document.querySelector(".list-icon");
 const grid = document.querySelector(".grid-icon");
-const ltg = document.querySelector(".ltg");
+const artistsContainer = document.querySelector(".artists-container");
 
 
 list.addEventListener("click", function() {
-    ltg.classList.add("list");
+    artistsContainer.classList.add("list");
     grid.classList.remove("active");
     list.classList.add("active");
 });
 
 grid.addEventListener("click", function() {
-    ltg.classList.remove("list");
+    artistsContainer.classList.remove("list");
     list.classList.remove("active");
     grid.classList.add("active");
 });
