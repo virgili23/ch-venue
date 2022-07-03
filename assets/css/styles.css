@@ -52,6 +52,16 @@ table {
   border-spacing: 0;
 }
 
+@media (max-width: 767px) {
+  #top-bar {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #top-bar {
+    display: none !important;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -243,20 +253,67 @@ table {
 }
 #events .grid-body .artists-container .artist-box {
   width: 100%;
-  height: 300px;
+  height: 450px;
   align-items: center;
   background: #ffffff;
   margin-bottom: 10px;
 }
-#events .grid-body .artists-container.list {
+#events .grid-body .artists-container .artist-box .headshot {
+  width: 100%;
+  height: 68%;
+}
+#events .grid-body .artists-container .artist-box .headshot img {
+  max-width: 100%;
+}
+#events .grid-body .artists-container .artist-box .date {
+  width: 100%;
+  height: 11%;
+}
+#events .grid-body .artists-container .artist-box .desc-box {
+  width: 100%;
+  height: 21%;
+}
+#events .grid-body .artists-container .artist-box .buy-tickets {
+  position: relative;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 100%;
+}
+#events .grid-body .artists-container.list, #events .grid-body .artists-container.force-list {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
 }
-#events .grid-body .artists-container.list .artist-box {
-  width: 95%;
-  height: 200px;
+#events .grid-body .artists-container.list .artist-box, #events .grid-body .artists-container.force-list .artist-box {
+  width: 100%;
+  height: 386px;
   margin-top: 10px;
+}
+#events .grid-body .artists-container.list .artist-box .headshot, #events .grid-body .artists-container.force-list .artist-box .headshot {
+  width: 25%;
+  height: 64%;
+  order: -1;
+}
+#events .grid-body .artists-container.list .artist-box .headshot img, #events .grid-body .artists-container.force-list .artist-box .headshot img {
+  padding: 10px;
+}
+#events .grid-body .artists-container.list .artist-box .date, #events .grid-body .artists-container.force-list .artist-box .date {
+  width: 100%;
+  height: 18%;
+  order: 1;
+}
+#events .grid-body .artists-container.list .artist-box .desc-box, #events .grid-body .artists-container.force-list .artist-box .desc-box {
+  width: 75%;
+  height: 60%;
+  order: 0;
+}
+#events .grid-body .artists-container.list .artist-box .buy-tickets, #events .grid-body .artists-container.force-list .artist-box .buy-tickets {
+  position: static;
+  opacity: 1;
+  width: 100%;
+  height: 18%;
+  order: 2;
 }
 
 #newsletter {
@@ -306,17 +363,6 @@ table {
   transition: all 0.3s ease-in-out;
   color: #de53f3;
   background: #ffffff;
-}
-
-@media (max-width: 767px) {
-  #top-bar {
-    display: none !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  #top-bar {
-    display: none !important;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
