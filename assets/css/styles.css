@@ -52,16 +52,6 @@ table {
   border-spacing: 0;
 }
 
-@media (max-width: 767px) {
-  #top-bar {
-    display: none !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  #top-bar {
-    display: none !important;
-  }
-}
 * {
   box-sizing: border-box;
 }
@@ -265,13 +255,55 @@ table {
 #events .grid-body .artists-container .artist-box .headshot img {
   max-width: 100%;
 }
-#events .grid-body .artists-container .artist-box .date {
+#events .grid-body .artists-container .artist-box .date-container {
   width: 100%;
   height: 11%;
 }
-#events .grid-body .artists-container .artist-box .desc-box {
+#events .grid-body .artists-container .artist-box .date-container .date-box .date {
+  float: left;
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 1em;
+}
+#events .grid-body .artists-container .artist-box .date-container .date-box .day {
+  background-color: #000000;
+  color: #de53f3;
+  float: right;
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 1em;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 25px 100%);
+}
+#events .grid-body .artists-container .artist-box .desc-container {
+  background-color: #ffffff;
   width: 100%;
   height: 21%;
+}
+#events .grid-body .artists-container .artist-box .desc-container .desc-box {
+  text-align: center;
+  margin-top: 20px;
+}
+#events .grid-body .artists-container .artist-box .desc-container .desc-box h2 {
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 1.6em;
+  letter-spacing: 1pt;
+  color: #de53f3;
+  font-weight: 500;
+  margin: 10px 0;
+}
+#events .grid-body .artists-container .artist-box .desc-container .desc-box p {
+  text-transform: capitalize;
+  font-family: "Merriweather";
+  font-size: 1em;
+  letter-spacing: 1pt;
+  font-style: italic;
+  color: #000000;
+  font-weight: 600;
 }
 #events .grid-body .artists-container .artist-box .buy-tickets {
   position: relative;
@@ -298,12 +330,12 @@ table {
 #events .grid-body .artists-container.list .artist-box .headshot img, #events .grid-body .artists-container.force-list .artist-box .headshot img {
   padding: 10px;
 }
-#events .grid-body .artists-container.list .artist-box .date, #events .grid-body .artists-container.force-list .artist-box .date {
+#events .grid-body .artists-container.list .artist-box .date-container, #events .grid-body .artists-container.force-list .artist-box .date-container {
   width: 100%;
   height: 18%;
   order: 1;
 }
-#events .grid-body .artists-container.list .artist-box .desc-box, #events .grid-body .artists-container.force-list .artist-box .desc-box {
+#events .grid-body .artists-container.list .artist-box .desc-container, #events .grid-body .artists-container.force-list .artist-box .desc-container {
   width: 75%;
   height: 60%;
   order: 0;
@@ -363,6 +395,73 @@ table {
   transition: all 0.3s ease-in-out;
   color: #de53f3;
   background: #ffffff;
+}
+
+@media (max-width: 480px) {
+  #top-bar {
+    display: none !important;
+  }
+  #events .grid-header h1 {
+    float: none;
+    text-align: center;
+  }
+  #events .grid-body .artists-container.list, #events .grid-body .artists-container.force-list {
+    padding: 0 10px;
+  }
+  #events .grid-body .artists-container.list .artist-box, #events .grid-body .artists-container.force-list .artist-box {
+    height: 216px;
+  }
+  #events .grid-body .artists-container.list .artist-box .headshot, #events .grid-body .artists-container.force-list .artist-box .headshot {
+    width: 40%;
+  }
+  #events .grid-body .artists-container.list .desc-container, #events .grid-body .artists-container.force-list .desc-container {
+    width: 60% !important;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  #top-bar {
+    display: none !important;
+  }
+  #events .grid-header h1 {
+    float: none;
+    text-align: center;
+  }
+  #events .grid-body .artists-container.list .artist-box, #events .grid-body .artists-container.force-list .artist-box {
+    height: 292px;
+  }
+  #events .grid-body .artists-container.list .artist-box .headshot, #events .grid-body .artists-container.force-list .artist-box .headshot {
+    width: 40%;
+  }
+  #events .grid-body .artists-container.list .desc-container, #events .grid-body .artists-container.force-list .desc-container {
+    width: 60% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #top-bar {
+    display: none !important;
+  }
+  #events .grid-header h1 {
+    float: none;
+    text-align: center;
+  }
+  #events .grid-body .artists-container.list .artist-box, #events .grid-body .artists-container.force-list .artist-box {
+    height: 392px;
+  }
+  #events .grid-body .artists-container.list .artist-box .headshot, #events .grid-body .artists-container.force-list .artist-box .headshot {
+    width: 40%;
+  }
+  #events .grid-body .artists-container.list .desc-container, #events .grid-body .artists-container.force-list .desc-container {
+    width: 60% !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  #events .grid-header h1 {
+    float: none;
+    text-align: center;
+  }
+  #events .grid-body .artists-container.list .artist-box, #events .grid-body .artists-container.force-list .artist-box {
+    height: 324px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

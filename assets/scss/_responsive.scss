@@ -1,16 +1,145 @@
-// Mobile
-@media (max-width: 767px) {
+//Mobile
+@media (max-width: 480px) {
     #top-bar {display:none !important;}
+
+    #events {
+        .grid-header {
+            h1 {
+                float:none;
+                text-align:center;
+            }
+        }
+        .grid-body {
+            .artists-container {
+                &.list, &.force-list {
+                    padding: 0 10px;
+                    .artist-box {
+                        height: 216px;
+                        .headshot {
+                            width:40%;
+                            }
+                        }
+                        .date-container {
+
+                        }
+                        .desc-container {
+                            width:60% !important;
+                        }
+                        .buy-tickets {
+
+                        }
+                    }
+                }
+            }
+        }
 }
 
-// Tablet
+
+// Mobile Large
+@media (min-width: 481px) and (max-width: 768px) {
+    #top-bar {display:none !important;}
+
+
+    #events {
+        .grid-header {
+            h1 {
+                float:none;
+                text-align:center;
+            }
+        }
+        .grid-body {
+            .artists-container {
+                &.list, &.force-list {
+
+                    .artist-box {
+                        height: 292px;
+                        .headshot {
+                            width:40%;
+                            }
+                        }
+                        .date-container {
+
+                        }
+                        .desc-container {
+                            width:60% !important;
+                        }
+                        .buy-tickets {
+
+                        }
+                    }
+                }
+            }
+        }
+}
+
+// Tablet Large
 @media (min-width: 768px) and (max-width: 991px) {
     #top-bar {display:none !important;}
+
+    #events {
+        .grid-header {
+            h1 {
+                float:none;
+                text-align:center;
+            }
+        }
+        .grid-body {
+            .artists-container {
+                &.list, &.force-list {
+
+                    .artist-box {
+                        height: 392px;
+                        .headshot {
+                            width:40%;
+                            }
+                        }
+                        .date-container {
+
+                        }
+                        .desc-container {
+                            width:60% !important;
+                        }
+                        .buy-tickets {
+
+                        }
+                    }
+                }
+            }
+        }
 }
 
 // Laptop
 @media (min-width: 992px) and (max-width: 1199px) {
+    #events {
+        .grid-header {
+            h1 {
+                float:none;
+                text-align:center;
+            }
+        }
+        .grid-body {
+            .artists-container {
+                &.list, &.force-list {
 
+                    .artist-box {
+                        height: 324px;
+                        .headshot {
+
+                            }
+                        }
+                        .date-container-container {
+
+                        }
+                        .desc-container {
+
+                        }
+                        .buy-tickets {
+
+                        }
+                    }
+                }
+            }
+        }
 }
 
 // Extra Large
