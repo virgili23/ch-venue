@@ -817,6 +817,9 @@ html {
   #events {
     padding-top: 95px;
   }
+  #events .heading-container {
+    margin: 0 15px;
+  }
   #events .heading-container .grid-header h1 {
     float: none;
     text-align: center;
@@ -892,6 +895,9 @@ html {
   }
   #events {
     padding-top: 95px;
+  }
+  #events .heading-container {
+    margin: 0 15px;
   }
   #events .heading-container .grid-header h1 {
     float: none;
