@@ -83,27 +83,31 @@ table {
   font-size: 1em;
   letter-spacing: normal;
 }
-#header #top-bar .get-connected ul a {
+#header #top-bar .get-connected ul li {
+  padding: 12px 0;
+}
+#header #top-bar .get-connected ul li:first-child {
+  padding: 0;
+}
+#header #top-bar .get-connected ul li a {
   text-decoration: none;
   color: #000000;
-}
-#header #top-bar .get-connected ul a li {
   padding: 12px 8px;
 }
-#header #top-bar .get-connected ul a i.fa-brands {
+#header #top-bar .get-connected ul li a i.fa-brands {
   font-size: 20px;
 }
-#header #top-bar .get-connected ul a:hover {
+#header #top-bar .get-connected ul li a:hover {
   transition: all 0.3s ease-in-out;
 }
-#header #top-bar .get-connected ul a:hover i.fa-brands {
+#header #top-bar .get-connected ul li a:hover i.fa-brands {
   color: #de53f3;
   transition: all 0.3s ease-in-out;
 }
-#header #top-bar .get-connected ul a:nth-child(4) li {
+#header #top-bar .get-connected ul li a:nth-child(4) li {
   padding: 11px 9px 14px 9px;
 }
-#header #top-bar .get-connected ul a:nth-child(4) li i.fa-brands {
+#header #top-bar .get-connected ul li a:nth-child(4) li i.fa-brands {
   font-size: 19px;
 }
 #header #top-bar .search-container {
@@ -186,18 +190,21 @@ table {
   flex-direction: row;
   width: 100%;
 }
-#header .navigation .container .row .navbar > ul > a {
+#header .navigation .container .row .navbar > ul > li {
+  position: relative;
+  top: 40px;
   font-size: 1.1em;
   letter-spacing: 0.1em;
   text-align: center;
-  position: relative;
   white-space: nowrap;
   width: 25%;
-  padding: 41px 0;
-  color: #ffffff;
-  text-decoration: none;
 }
-#header .navigation .container .row .navbar > ul > a:hover {
+#header .navigation .container .row .navbar > ul > li a {
+  padding: 25px;
+  text-decoration: none;
+  color: #ffffff;
+}
+#header .navigation .container .row .navbar > ul > li a:hover {
   color: #de53f3;
   transition: all 0.3s ease-in-out;
 }
