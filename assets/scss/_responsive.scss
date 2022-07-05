@@ -1,8 +1,145 @@
+// Multiple Breakpoint Items 
+@media (max-width: 1200px) {
+    .navigation {
+        height: 90px;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        .container {
+            max-width: 100% !important;
+            padding-right: 15px;
+            padding-left: 15px;
+            .row {
+                .logo {
+                    a {
+                        img {
+                            width: 150px;
+                            bottom: -7px !important;
+                        }
+                    }
+                }
+                #mobile-menu-toggle {
+                    float:right;
+                    padding: 20px 25px;
+                    position: relative;
+                    z-index: 11;
+                    i {
+                        color: $white;
+                        font-size:3em;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-active {
+        #menu {
+            background: $black;
+            position: fixed;
+            width: 70%;
+            top: 0;
+            bottom: 0;
+            right:0;
+            z-index: 9;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            opacity: 1;
+            transition: all .2s ease-in-out;
+            transform: translate3d( 0, 0, 0);
+            .container {
+                margin-bottom: 50vh;
+                .row {
+                    display: block !important;
+                    .login-container {
+                        background: $pink;
+                        width: 90%;
+                        background: #de53f3;
+                        margin: auto;
+                        text-align: center;
+                        a.login-btn {
+                            text-decoration: none;
+                            display: inline-block;
+                            padding-top: 4px;
+                            // padding-right: 50px;
+                            padding-bottom: 14px;
+                            // padding-left: 25px;
+                            span {
+                                text-transform: uppercase;
+                                font-family: "Oswald";
+                                color: $white;
+                                font-size: 0.9em;
+                                letter-spacing: 0.1em;
+                            }
+                            img {
+                                position: relative;
+                                top: 7px;
+                                left: -10px;
+                            }
+                            &:hover {
+                                span {
+                                    color: $black;
+                                    transition: $btnTransitions;
+                                }
+                            }
+                        }
+                    }
+                    ul {
+                        display: flex;
+                        width:80%;
+                        margin: auto;
+                        &>a {
+                            font-family: 'Oswald';
+                            text-transform: uppercase;
+                            font-size: 1.1em;
+                            letter-spacing: 0.1em;
+                            text-align: left;
+                            position: relative;
+                            white-space: nowrap;
+                            width:100%;
+                            padding:20px 0;
+                            color: $white;
+                            text-decoration: none;
+                                &:hover {
+                                    color: $pink;
+                                    // background-color: $white;
+                                    transition: $btnTransitions;
+                                }
+                        }
+                    }
+                }
+            }
+        }
+        #events, #newsletter, #footer {
+            opacity:0.3;
+        }
+    }
+    // Hamburger Menu changes ends
+
+    // Cancellations
+    #top-bar {display:none !important;}
+    .navbar {display: none;}
+
+}
+
+
+
+// End of Global Styles
+
 //Mobile
 @media (max-width: 480px) {
-    #top-bar {display:none !important;}
+    .menu-active #menu {
+        width:100%;
+    }
 
     #events {
+        padding-top: 95px;
         .grid-header {
             h1 {
                 float:none;
@@ -14,33 +151,90 @@
                 &.list, &.force-list {
                     padding: 0 10px;
                     .artist-box {
-                        height: 216px;
+                        height: 230px;
                         .headshot {
-                            width:40%;
+                            width:43%;
+                            height: 63%;
+                            img {
+                                padding: 5px;
                             }
                         }
                         .date-container {
+                            height: 20%;
+                            .date-box {
+                                .date {
 
+                                }
+                                .day {
+                                    padding: 12px 22px;
+                                }
+                            }
                         }
                         .desc-container {
-                            width:60% !important;
+                            width:55%;
                         }
-                        .buy-tickets-container-container {
+                        .buy-tickets-container {
+                            height: 20%;
+                            span {
+                                font-size:0.8em;
+                                top: 20%;
+                                img {
+                                    margin-right: 10px;
+                                }
+                            }                       
+                        }
+                        }
 
+                    }
+                }
+            }
+        }
+    #newsletter {
+        .newsletter-container {
+           height:350px; 
+           padding: 40px 20px;
+        }
+    }
+    #footer {
+        .social-container {
+            margin-bottom: 40px; 
+            .social-header {
+                h2 {
+                    float:none;
+                }
+            }
+            .social-body {
+                .tab-navigation {
+                    .tablink {
+                        .fa-brands {
+                            font-size: 2em;
+                        }
+                        span {
+                            display: none;
                         }
                     }
                 }
             }
         }
+        .map-container {
+            .map-header {
+                h2 {
+                    float: none;
+                }
+            }
+        }
+    }
 }
 
 
 // Mobile Large
 @media (min-width: 481px) and (max-width: 768px) {
-    #top-bar {display:none !important;}
 
-
+    .menu-active #menu {
+        width: 90%;
+    }
     #events {
+        padding-top: 95px;
         .grid-header {
             h1 {
                 float:none;
@@ -50,33 +244,74 @@
         .grid-body {
             .artists-container {
                 &.list, &.force-list {
-
                     .artist-box {
                         height: 292px;
                         .headshot {
                             width:40%;
-                            }
+                            height: 64%;
                         }
                         .date-container {
-
+                            height: 17%;
                         }
                         .desc-container {
-                            width:60% !important;
+                            width:60%;
                         }
-                        .buy-tickets-container-container {
+                        .buy-tickets-container {
+                            height: 19%;
+                        }
+                        }
 
+                    }
+                }
+            }
+        }
+    #newsletter {
+        .newsletter-container {
+            height: 350px;
+        }
+    }
+    #footer {
+        .social-container {
+            margin-bottom: 40px; 
+            .social-header {
+                h2 {
+                    float:none;
+                }
+            }
+            .social-body {
+                .tab-navigation {
+                    .tablink {
+                        .fa-brands {
+                            font-size: 2em;
+                        }
+                        span {
+                            display: none;
                         }
                     }
                 }
             }
         }
+        .map-container {
+            .map-header {
+                h2 {
+                    float: none;
+                }
+            }
+        }
+    }
+
 }
+
+
+
+
 
 // Tablet Large
 @media (min-width: 768px) and (max-width: 991px) {
-    #top-bar {display:none !important;}
+
 
     #events {
+        padding-top: 95px;
         .grid-header {
             h1 {
                 float:none;
@@ -88,13 +323,20 @@
                 &.list, &.force-list {
 
                     .artist-box {
-                        height: 392px;
+                        height: 350px;
                         .headshot {
-                            width:40%;
+                            width:39%;
                             }
                         }
                         .date-container {
-
+                            .date-box {
+                                .date {
+                                    padding: 15px;
+                                }
+                                .day {
+                                    padding: 15px 30px;
+                                }
+                            }
                         }
                         .desc-container {
                             width:60% !important;
@@ -104,12 +346,21 @@
                         }
                     }
                 }
+            }
+        }
+
+        #footer {
+            .social-container {
+                margin-bottom: 40px;
             }
         }
 }
 
 // Laptop
 @media (min-width: 992px) and (max-width: 1199px) {
+    // #menu {display: none;}
+    // #mobile-menu-toggle {display: none;}
+
     #events {
         .grid-header {
             h1 {
@@ -122,27 +373,65 @@
                 &.list, &.force-list {
 
                     .artist-box {
-                        height: 324px;
+                        height: 310px;
                         .headshot {
-
+                            height: 67%;
                             }
                         }
-                        .date-container-container {
-
+                        .date-container {
+                            height: 16% !important;
+                            .date-box {
+                                .date {
+                                    padding: 20px;
+                                }
+                                .day {
+                                    padding: 15px 30px;
+                                }
+                            }
                         }
                         .desc-container {
 
                         }
                         .buy-tickets-container {
-
+                            height: 17% !important;
                         }
                     }
                 }
             }
         }
+
+    #footer {
+        .social-container {
+            .social-body {
+                .social-tab {
+                    .tab-body {
+                        .slide-container {
+                            .slide-body {
+                                height: 143px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .map-container {
+            .map-body {
+                .title {
+                    h3 {
+                        span {
+                           font-size: 12pt; 
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Extra Large
 @media (min-width: 1200px) {
+    #menu {display: none;}
+    #mobile-menu-toggle {display: none;}
+
 
 }

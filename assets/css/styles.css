@@ -202,6 +202,10 @@ table {
   transition: all 0.3s ease-in-out;
 }
 
+#menu {
+  display: none;
+}
+
 #events {
   background-color: #e5e5e5;
 }
@@ -263,7 +267,7 @@ table {
 #events .grid-body .artists-container .artist-box .date-container .date-box .date {
   color: #de53f3;
   float: left;
-  padding: 14px;
+  padding: 16px;
   text-transform: uppercase;
   font-family: "Oswald";
   font-weight: 400;
@@ -273,6 +277,7 @@ table {
 #events .grid-body .artists-container .artist-box .date-container .date-box .day {
   position: relative;
   bottom: 5px;
+  right: 0;
   background-color: #2e2e2e;
   color: #de53f3;
   float: right;
@@ -341,12 +346,12 @@ table {
 }
 #events .grid-body .artists-container.list .artist-box, #events .grid-body .artists-container.force-list .artist-box {
   width: 100%;
-  height: 386px;
+  height: 350px;
   margin-top: 10px;
 }
 #events .grid-body .artists-container.list .artist-box .headshot, #events .grid-body .artists-container.force-list .artist-box .headshot {
   width: 25%;
-  height: 64%;
+  height: 70%;
   order: -1;
 }
 #events .grid-body .artists-container.list .artist-box .headshot img, #events .grid-body .artists-container.force-list .artist-box .headshot img {
@@ -354,19 +359,26 @@ table {
 }
 #events .grid-body .artists-container.list .artist-box .date-container, #events .grid-body .artists-container.force-list .artist-box .date-container {
   width: 100%;
-  height: 18%;
+  height: 14%;
   order: 1;
+}
+#events .grid-body .artists-container.list .artist-box .date-container .date, #events .grid-body .artists-container.force-list .artist-box .date-container .date {
+  padding: 15px;
 }
 #events .grid-body .artists-container.list .artist-box .desc-container, #events .grid-body .artists-container.force-list .artist-box .desc-container {
   width: 75%;
   height: 60%;
   order: 0;
 }
+#events .grid-body .artists-container.list .artist-box .desc-container .desc-box, #events .grid-body .artists-container.force-list .artist-box .desc-container .desc-box {
+  text-align: left;
+  margin: 20px;
+}
 #events .grid-body .artists-container.list .artist-box .buy-tickets-container, #events .grid-body .artists-container.force-list .artist-box .buy-tickets-container {
   position: static;
   opacity: 1;
   width: 100%;
-  height: 18%;
+  height: 16%;
   order: 2;
 }
 #events .grid-body .artists-container.list .artist-box .buy-tickets-container:hover, #events .grid-body .artists-container.force-list .artist-box .buy-tickets-container:hover {
@@ -376,7 +388,7 @@ table {
   background-color: #ffffff;
 }
 #events .grid-body .artists-container.list .artist-box .buy-tickets-container span, #events .grid-body .artists-container.force-list .artist-box .buy-tickets-container span {
-  top: 31%;
+  top: 30%;
 }
 
 #newsletter {
@@ -462,7 +474,7 @@ table {
   color: #ffffff;
   height: 60px;
   border: 0;
-  width: 33.2%;
+  width: 33.3%;
 }
 #footer .social-container .social-body .tab-navigation .tablink.active-tab {
   background-color: #de53f3;
@@ -518,7 +530,7 @@ table {
 }
 #footer .social-container .social-body .social-tab .tab-body .slide-container .slide-body {
   background-color: #ffffff;
-  height: 235px;
+  height: 194px;
 }
 #footer .social-container .social-body .social-tab .tab-body .slide-container .slide-body h4 {
   font-family: "Oswald";
@@ -607,9 +619,126 @@ table {
   width: 100%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1200px) {
+  .navigation {
+    height: 90px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
+  .navigation .container {
+    max-width: 100% !important;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navigation .container .row .logo a img {
+    width: 150px;
+    bottom: -7px !important;
+  }
+  .navigation .container .row #mobile-menu-toggle {
+    float: right;
+    padding: 20px 25px;
+    position: relative;
+    z-index: 11;
+  }
+  .navigation .container .row #mobile-menu-toggle i {
+    color: #ffffff;
+    font-size: 3em;
+  }
+  .navigation .container .row #mobile-menu-toggle:hover {
+    cursor: pointer;
+  }
+  .menu-active #menu {
+    background: #000000;
+    position: fixed;
+    width: 70%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-active #menu .container {
+    margin-bottom: 50vh;
+  }
+  .menu-active #menu .container .row {
+    display: block !important;
+  }
+  .menu-active #menu .container .row .login-container {
+    background: #de53f3;
+    width: 90%;
+    background: #de53f3;
+    margin: auto;
+    text-align: center;
+  }
+  .menu-active #menu .container .row .login-container a.login-btn {
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 4px;
+    padding-bottom: 14px;
+  }
+  .menu-active #menu .container .row .login-container a.login-btn span {
+    text-transform: uppercase;
+    font-family: "Oswald";
+    color: #ffffff;
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+  }
+  .menu-active #menu .container .row .login-container a.login-btn img {
+    position: relative;
+    top: 7px;
+    left: -10px;
+  }
+  .menu-active #menu .container .row .login-container a.login-btn:hover span {
+    color: #000000;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-active #menu .container .row ul {
+    display: flex;
+    width: 80%;
+    margin: auto;
+  }
+  .menu-active #menu .container .row ul > a {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    text-align: left;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+    padding: 20px 0;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .menu-active #menu .container .row ul > a:hover {
+    color: #de53f3;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-active #events, .menu-active #newsletter, .menu-active #footer {
+    opacity: 0.3;
+  }
   #top-bar {
     display: none !important;
+  }
+  .navbar {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .menu-active #menu {
+    width: 100%;
+  }
+  #events {
+    padding-top: 95px;
   }
   #events .grid-header h1 {
     float: none;
@@ -619,18 +748,60 @@ table {
     padding: 0 10px;
   }
   #events .grid-body .artists-container.list .artist-box, #events .grid-body .artists-container.force-list .artist-box {
-    height: 216px;
+    height: 230px;
   }
   #events .grid-body .artists-container.list .artist-box .headshot, #events .grid-body .artists-container.force-list .artist-box .headshot {
-    width: 40%;
+    width: 43%;
+    height: 63%;
   }
-  #events .grid-body .artists-container.list .desc-container, #events .grid-body .artists-container.force-list .desc-container {
-    width: 60% !important;
+  #events .grid-body .artists-container.list .artist-box .headshot img, #events .grid-body .artists-container.force-list .artist-box .headshot img {
+    padding: 5px;
+  }
+  #events .grid-body .artists-container.list .artist-box .date-container, #events .grid-body .artists-container.force-list .artist-box .date-container {
+    height: 20%;
+  }
+  #events .grid-body .artists-container.list .artist-box .date-container .date-box .day, #events .grid-body .artists-container.force-list .artist-box .date-container .date-box .day {
+    padding: 12px 22px;
+  }
+  #events .grid-body .artists-container.list .artist-box .desc-container, #events .grid-body .artists-container.force-list .artist-box .desc-container {
+    width: 55%;
+  }
+  #events .grid-body .artists-container.list .artist-box .buy-tickets-container, #events .grid-body .artists-container.force-list .artist-box .buy-tickets-container {
+    height: 20%;
+  }
+  #events .grid-body .artists-container.list .artist-box .buy-tickets-container span, #events .grid-body .artists-container.force-list .artist-box .buy-tickets-container span {
+    font-size: 0.8em;
+    top: 20%;
+  }
+  #events .grid-body .artists-container.list .artist-box .buy-tickets-container span img, #events .grid-body .artists-container.force-list .artist-box .buy-tickets-container span img {
+    margin-right: 10px;
+  }
+  #newsletter .newsletter-container {
+    height: 350px;
+    padding: 40px 20px;
+  }
+  #footer .social-container {
+    margin-bottom: 40px;
+  }
+  #footer .social-container .social-header h2 {
+    float: none;
+  }
+  #footer .social-container .social-body .tab-navigation .tablink .fa-brands {
+    font-size: 2em;
+  }
+  #footer .social-container .social-body .tab-navigation .tablink span {
+    display: none;
+  }
+  #footer .map-container .map-header h2 {
+    float: none;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
-  #top-bar {
-    display: none !important;
+  .menu-active #menu {
+    width: 90%;
+  }
+  #events {
+    padding-top: 95px;
   }
   #events .grid-header h1 {
     float: none;
@@ -641,27 +812,61 @@ table {
   }
   #events .grid-body .artists-container.list .artist-box .headshot, #events .grid-body .artists-container.force-list .artist-box .headshot {
     width: 40%;
+    height: 64%;
   }
-  #events .grid-body .artists-container.list .desc-container, #events .grid-body .artists-container.force-list .desc-container {
-    width: 60% !important;
+  #events .grid-body .artists-container.list .artist-box .date-container, #events .grid-body .artists-container.force-list .artist-box .date-container {
+    height: 17%;
+  }
+  #events .grid-body .artists-container.list .artist-box .desc-container, #events .grid-body .artists-container.force-list .artist-box .desc-container {
+    width: 60%;
+  }
+  #events .grid-body .artists-container.list .artist-box .buy-tickets-container, #events .grid-body .artists-container.force-list .artist-box .buy-tickets-container {
+    height: 19%;
+  }
+  #newsletter .newsletter-container {
+    height: 350px;
+  }
+  #footer .social-container {
+    margin-bottom: 40px;
+  }
+  #footer .social-container .social-header h2 {
+    float: none;
+  }
+  #footer .social-container .social-body .tab-navigation .tablink .fa-brands {
+    font-size: 2em;
+  }
+  #footer .social-container .social-body .tab-navigation .tablink span {
+    display: none;
+  }
+  #footer .map-container .map-header h2 {
+    float: none;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  #top-bar {
-    display: none !important;
+  #events {
+    padding-top: 95px;
   }
   #events .grid-header h1 {
     float: none;
     text-align: center;
   }
   #events .grid-body .artists-container.list .artist-box, #events .grid-body .artists-container.force-list .artist-box {
-    height: 392px;
+    height: 350px;
   }
   #events .grid-body .artists-container.list .artist-box .headshot, #events .grid-body .artists-container.force-list .artist-box .headshot {
-    width: 40%;
+    width: 39%;
+  }
+  #events .grid-body .artists-container.list .date-container .date-box .date, #events .grid-body .artists-container.force-list .date-container .date-box .date {
+    padding: 15px;
+  }
+  #events .grid-body .artists-container.list .date-container .date-box .day, #events .grid-body .artists-container.force-list .date-container .date-box .day {
+    padding: 15px 30px;
   }
   #events .grid-body .artists-container.list .desc-container, #events .grid-body .artists-container.force-list .desc-container {
     width: 60% !important;
+  }
+  #footer .social-container {
+    margin-bottom: 40px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -670,7 +875,36 @@ table {
     text-align: center;
   }
   #events .grid-body .artists-container.list .artist-box, #events .grid-body .artists-container.force-list .artist-box {
-    height: 324px;
+    height: 310px;
+  }
+  #events .grid-body .artists-container.list .artist-box .headshot, #events .grid-body .artists-container.force-list .artist-box .headshot {
+    height: 67%;
+  }
+  #events .grid-body .artists-container.list .date-container, #events .grid-body .artists-container.force-list .date-container {
+    height: 16% !important;
+  }
+  #events .grid-body .artists-container.list .date-container .date-box .date, #events .grid-body .artists-container.force-list .date-container .date-box .date {
+    padding: 20px;
+  }
+  #events .grid-body .artists-container.list .date-container .date-box .day, #events .grid-body .artists-container.force-list .date-container .date-box .day {
+    padding: 15px 30px;
+  }
+  #events .grid-body .artists-container.list .buy-tickets-container, #events .grid-body .artists-container.force-list .buy-tickets-container {
+    height: 17% !important;
+  }
+  #footer .social-container .social-body .social-tab .tab-body .slide-container .slide-body {
+    height: 143px;
+  }
+  #footer .map-container .map-body .title h3 span {
+    font-size: 12pt;
+  }
+}
+@media (min-width: 1200px) {
+  #menu {
+    display: none;
+  }
+  #mobile-menu-toggle {
+    display: none;
   }
 }
 

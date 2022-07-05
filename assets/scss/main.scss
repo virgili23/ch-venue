@@ -172,7 +172,9 @@ body {
 
 }
 
-
+#menu {
+    display: none;
+}
 
 #events {
     background-color: $grey;
@@ -239,7 +241,7 @@ body {
                         .date {
                             color: $pink;
                             float: left;
-                            padding: 14px;
+                            padding: 16px;
                             text-transform: uppercase;
                             font-family: 'Oswald';
                             font-weight: 400;
@@ -249,6 +251,7 @@ body {
                         .day {
                             position: relative;
                             bottom: 5px;
+                            right: 0;
                             background-color: $dark-grey;
                             color: $pink;
                             float: right;
@@ -324,12 +327,11 @@ body {
                 width: 100%;
                 .artist-box {
                     width: 100%;
-                    // height: 330px;
-                    height: 386px;
+                    height: 350px;
                     margin-top: 10px;
                     .headshot {
                         width:25%;
-                        height: 64%;
+                        height: 70%;
                         order: -1;
                         img {
                             padding: 10px;
@@ -337,19 +339,26 @@ body {
                     }
                     .date-container {
                         width:100%;
-                        height: 18%;
+                        height: 14%;
                         order: 1;
+                        .date {
+                            padding: 15px;
+                        }
                     }
                     .desc-container {
                         width: 75%;
                         height: 60%;
                         order: 0;
+                        .desc-box {
+                            text-align: left;
+                            margin: 20px;
+                        }
                     }
                     .buy-tickets-container {
                         position: static;
                         opacity: 1;
                         width: 100%;
-                        height: 18%;
+                        height: 16%;
                         order: 2;
                         &:hover {
                             transition: $btnTransitions;
@@ -358,7 +367,7 @@ body {
                             background-color: $white;
                         }
                         span {
-                            top: 31%;
+                            top: 30%;
                         }
                     }
                 }
@@ -462,7 +471,7 @@ body {
                     color: $white;
                     height: 60px;
                     border: 0;
-                    width: 33.2%;
+                    width: 33.3%;
                     &.active-tab {
                         // padding: 10px;
                         background-color: $pink;
@@ -519,7 +528,8 @@ body {
                         margin:10px;
                         .slide-body {
                             background-color: $white;
-                            height: 235px;
+                            // height: 235px;
+                            height: 194px;
                             h4 {
                                 font-family: 'Oswald';
                                 font-size: 1.2em;
@@ -624,7 +634,73 @@ body {
     }
 }
 
+//Global Features
+// .search-container {
+//     padding: 7px 0;
+//     width: 28%;
+//     max-width: 367px;
+//     .search-bar {
+//         width:100%;
+//         background: $grey;
+//         display:flex;
+//         align-items: center;
+//         border-radius: 60px;
+//         padding: 0 5px 0 17px;
+//         input {
+//             background: $grey;
+//             flex:1;
+//             border:0;
+//             outline: none;
+//             padding: 5px;
+//             font-size: 0.9em;
+//             letter-spacing: 0.1em;
+//             color: $black;
+//             text-transform: uppercase;
+//             &::placeholder {
+//                 color: $black;
+//                 font-size: 0.9em;
+//                 letter-spacing: 0.1em;
+//             }
 
+//         }
+//         button {
+//             border:0;
+//             border-radius: 50%;
+//             background: $grey;
+//         }
+//     }
+
+// }
+
+// .login-container {
+//     width: 145px;
+//     background: $pink;
+//     margin-left: 20px;
+//     a.login-btn {
+//         text-decoration: none;
+//         display: inline-block;
+//         padding-top: 4px;
+//         padding-right: 50px;
+//         padding-bottom: 14px;
+//         padding-left: 25px;
+//         span {
+//             color: $white;
+//             font-size: 0.9em;
+//             letter-spacing: 0.1em;
+//         }
+//         img {
+//             position: relative;
+//             top: 7px;
+//             left: 10px;
+//         }
+//         &:hover {
+//             span {
+//                 color: $black;
+//                 transition: $btnTransitions;
+//             }
+//         }
+//     }
+// }
 
 @import "responsive";
 
