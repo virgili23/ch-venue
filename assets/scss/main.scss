@@ -593,7 +593,7 @@ body {
                 float:left;
             }
             p {
-                font-family: 'Merriweather';
+                font-family: 'Merriweather Italic';
                 text-transform: capitalize;
                 font-style: italic;
                 font-size: 1em;
@@ -633,74 +633,6 @@ body {
         }
     }
 }
-
-//Global Features
-// .search-container {
-//     padding: 7px 0;
-//     width: 28%;
-//     max-width: 367px;
-//     .search-bar {
-//         width:100%;
-//         background: $grey;
-//         display:flex;
-//         align-items: center;
-//         border-radius: 60px;
-//         padding: 0 5px 0 17px;
-//         input {
-//             background: $grey;
-//             flex:1;
-//             border:0;
-//             outline: none;
-//             padding: 5px;
-//             font-size: 0.9em;
-//             letter-spacing: 0.1em;
-//             color: $black;
-//             text-transform: uppercase;
-//             &::placeholder {
-//                 color: $black;
-//                 font-size: 0.9em;
-//                 letter-spacing: 0.1em;
-//             }
-
-//         }
-//         button {
-//             border:0;
-//             border-radius: 50%;
-//             background: $grey;
-//         }
-//     }
-
-// }
-
-// .login-container {
-//     width: 145px;
-//     background: $pink;
-//     margin-left: 20px;
-//     a.login-btn {
-//         text-decoration: none;
-//         display: inline-block;
-//         padding-top: 4px;
-//         padding-right: 50px;
-//         padding-bottom: 14px;
-//         padding-left: 25px;
-//         span {
-//             color: $white;
-//             font-size: 0.9em;
-//             letter-spacing: 0.1em;
-//         }
-//         img {
-//             position: relative;
-//             top: 7px;
-//             left: 10px;
-//         }
-//         &:hover {
-//             span {
-//                 color: $black;
-//                 transition: $btnTransitions;
-//             }
-//         }
-//     }
-// }
 
 @import "responsive";
 

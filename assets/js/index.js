@@ -60,3 +60,38 @@ $(window).bind("resize", function () {
         faIcon.classList.remove("fa-xmark");
     }
 }).trigger('resize');
+
+jQuery(document).ready(function(){
+    jQuery(".tab-body-tw").slick({
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      centerMode: false,
+      variableWidth: true,
+      prevArrow: '.arrow-prev-tw',
+      nextArrow: '.arrow-next-tw'
+    });
+
+    jQuery(".tab-body-ig").slick({
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      centerMode: false,
+      variableWidth: true,
+      prevArrow: '.arrow-prev-ig',
+      nextArrow: '.arrow-next-ig'
+    });
+
+    jQuery(".tab-body-fb").slick({
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      centerMode: false,
+      variableWidth: true,
+      prevArrow: '.arrow-prev-fb',
+      nextArrow: '.arrow-next-fb'
+    });
+  });
