@@ -54,22 +54,20 @@
             transition: all .2s ease-in-out;
             transform: translate3d( 0, 0, 0);
             .container {
-                margin-bottom: 50vh;
+                position: absolute;
+                top:100px;
                 .row {
                     display: block !important;
                     .login-container {
                         background: $pink;
-                        width: 90%;
+                        width: 80%;
                         background: #de53f3;
                         margin: auto;
                         text-align: center;
                         a.login-btn {
                             text-decoration: none;
                             display: inline-block;
-                            padding-top: 4px;
-                            // padding-right: 50px;
-                            padding-bottom: 14px;
-                            // padding-left: 25px;
+                            padding: 4px 70px 14px;
                             span {
                                 text-transform: uppercase;
                                 font-family: "Oswald";
@@ -140,9 +138,6 @@
 @media (max-width: 480px) {
     .menu-active #menu {
         width:100%;
-        .container {
-            margin-bottom: 20vh;
-        }
     }
 
     #events {
@@ -229,6 +224,26 @@
                     float: none;
                 }
             }
+            .map-body {
+                .title {
+                    h3 {
+                        span {
+                            display: block;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+                a {
+                    .content {
+                        .map-pointer-container {
+                            height: 250px;
+                            .address-block {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -239,9 +254,6 @@
 
     .menu-active #menu {
         width: 90%;
-        .container {
-            margin-bottom: 20vh;
-        }
     }
     #events {
         padding-top: 95px;
@@ -307,6 +319,26 @@
                     float: none;
                 }
             }
+            .map-body {
+                .title {
+                    h3 {
+                        span {
+                            display: block;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+                a {
+                    .content {
+                        .map-pointer-container {
+                            height: 291px;
+                            .address-block {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -318,10 +350,6 @@
 
 // Tablet Large
 @media (min-width: 768px) and (max-width: 991px) {
-    .menu-active #menu .container {
-        margin-bottom: 30vh;
-    }
-
     #events {
         padding-top: 95px;
         .grid-header {
@@ -364,6 +392,21 @@
         #footer {
             .social-container {
                 margin-bottom: 40px;
+            }
+            .map-container {
+                .map-body {
+                    a {
+                        .content {
+                            .map-pointer-container {
+                                height: 371px;
+                                .address-block {
+                                    top: 33%;
+                                    left: 210px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 }
@@ -435,6 +478,17 @@
                         }
                     }
                 }
+                a {
+                    .content {
+                        .map-pointer-container {
+                            height: 242px;
+                            .address-block {
+                                top: 30%;
+                                left: 133px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -444,6 +498,4 @@
 @media (min-width: 1200px) {
     #menu {display: none;}
     #mobile-menu-toggle {display: none;}
-
-
 }

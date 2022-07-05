@@ -1,7 +1,9 @@
 @import "reset";
 @import "variables";
 
-
+html {
+    scroll-behavior: smooth;
+}
 * {
     box-sizing: border-box;
 }
@@ -9,6 +11,24 @@
 #header {
     text-transform: uppercase;
     font-family: 'Oswald';
+    &.fixed-header {
+        .navigation {
+            position: fixed;
+            width: 100%;
+            z-index: 15;
+            top: 0;
+            .container {
+                .row {
+                    .logo {
+                        img {
+                            position: static;
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
     #top-bar {
         background: white;
         height:45px;
@@ -473,14 +493,17 @@
                     height: 60px;
                     border: 0;
                     width: 33.3%;
-                    &.active-tab {
-                        // padding: 10px;
+                    &:hover {
                         background-color: $pink;
+                        background-image: -webkit-linear-gradient(72deg, $pink 50%, $dark-pink 50%);
+                    }
+                    &.active-tab {
+                        background-color: $pink;
+                        background-image: -webkit-linear-gradient(71deg, $pink 50%, $dark-pink 50%);
                         height: 65px;
                     }
                     &:focus {
                         outline: 0;
-                        // padding: 10px;
                     }
                     .fa-brands {
                         font-size: 1.2em;
@@ -519,6 +542,9 @@
                             &:hover {
                                 color: $black;
                             }
+                            .arrow {
+                                font-size:1.3em;
+                            }
                         }
                     }
                 }
@@ -529,7 +555,6 @@
                         margin:10px;
                         .slide-body {
                             background-color: $white;
-                            // height: 235px;
                             height: 194px;
                             h4 {
                                 font-family: 'Oswald';
@@ -573,6 +598,10 @@
                             a {
                                 color: $white;
                                 text-decoration: none;
+                                &:hover {
+                                    transition: $btnTransitions;
+                                    color: $black;
+                                }
                             }
                             
                         }
@@ -624,11 +653,50 @@
                 }
 
             }
-            .content {
-                background-color: #f5f5f5;
-                padding: 10px;
-                img {
-                    width: 100%;
+            a {
+                text-decoration: none;
+                .content {
+                    background-color: #f5f5f5;
+                    padding: 10px;
+                    .map-pointer-container {
+                        background-image: url('../img/map-pin.jpg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        height: 291px;
+                        .address-block {
+                            background: $black;
+                            color: $white;
+                            font-family: 'Oswald';
+                            position: relative;
+                            top: 31%;
+                            left: 161px;
+                            max-width: 186px;
+                            padding: 20px;
+                            &:before {
+                                position: absolute;
+                                content: "";
+                                width: 16px;
+                                height: 16px;
+                                background: $black;
+                                top: 19%;
+                                left: -8px;
+                                transform: rotate(45deg);
+                            }
+                            h4 {
+                                font-size: 1em;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                                letter-spacing: 1pt;
+                            }
+                            p {
+                                font-weight: 200;
+                                text-transform: capitalize;
+                                letter-spacing: 1px;  
+                                margin: 5px 0;                      
+                            }
+                        }
+                    }
                 }
             }
         }

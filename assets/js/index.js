@@ -16,6 +16,22 @@ toggleBtn.onclick = function() {
 };
 
 
+// Header Scroll
+$(function() {
+  //caches a jQuery object containing the header element
+  const header = $("#header");
+  $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 120) {
+          header.removeClass("static-header").addClass("fixed-header");
+      } else {
+          header.removeClass("fixed-header").addClass("static-header");
+      }
+  });
+});
+
+
 // For the Grid and List buttons
 listIcon.addEventListener("click", function() {
     artistsContainer.classList.add("list");
@@ -61,6 +77,8 @@ $(window).bind("resize", function () {
     }
 }).trigger('resize');
 
+
+// Slick Slide
 jQuery(document).ready(function(){
     jQuery(".tab-body-tw").slick({
       dots: false,
