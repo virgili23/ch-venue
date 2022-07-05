@@ -592,7 +592,7 @@ table {
   float: left;
 }
 #footer .map-container .map-header p {
-  font-family: "Merriweather Italic";
+  font-family: "Merriweather";
   text-transform: capitalize;
   font-style: italic;
   font-size: 1em;
@@ -713,7 +713,7 @@ table {
     width: 80%;
     margin: auto;
   }
-  .menu-active #menu .container .row ul > a {
+  .menu-active #menu .container .row ul > li {
     font-family: "Oswald";
     text-transform: uppercase;
     font-size: 1.1em;
@@ -726,7 +726,12 @@ table {
     color: #ffffff;
     text-decoration: none;
   }
-  .menu-active #menu .container .row ul > a:hover {
+  .menu-active #menu .container .row ul > li a {
+    padding: 10px 120px 10px 10px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .menu-active #menu .container .row ul > li a:hover {
     color: #de53f3;
     transition: all 0.3s ease-in-out;
   }
@@ -886,6 +891,9 @@ table {
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+  #events {
+    padding-top: 95px;
+  }
   #events .grid-header h1 {
     float: none;
     text-align: center;

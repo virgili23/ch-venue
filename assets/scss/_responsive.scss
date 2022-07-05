@@ -94,7 +94,7 @@
                         display: flex;
                         width:80%;
                         margin: auto;
-                        &>a {
+                        &>li {
                             font-family: 'Oswald';
                             text-transform: uppercase;
                             font-size: 1.1em;
@@ -106,11 +106,15 @@
                             padding:20px 0;
                             color: $white;
                             text-decoration: none;
+                            a {
+                                padding: 10px 120px 10px 10px;
+                                text-decoration: none;
+                                color: $white;
                                 &:hover {
                                     color: $pink;
-                                    // background-color: $white;
                                     transition: $btnTransitions;
                                 }
+                            }
                         }
                     }
                 }
@@ -369,6 +373,7 @@
 
 
     #events {
+        padding-top: 95px;
         .grid-header {
             h1 {
                 float:none;
