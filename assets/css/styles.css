@@ -64,16 +64,6 @@ html {
   text-transform: uppercase;
   font-family: "Oswald";
 }
-#header.fixed-header .navigation {
-  position: fixed;
-  width: 100%;
-  z-index: 15;
-  top: 0;
-}
-#header.fixed-header .navigation .container .row .logo img {
-  position: static;
-  width: 50%;
-}
 #header #top-bar {
   background: white;
   height: 45px;
@@ -869,6 +859,9 @@ html {
   #footer .social-container .social-body .tab-navigation .tablink span {
     display: none;
   }
+  #footer .social-container .social-body .tab-navigation .tablink.active-tab {
+    background-image: -webkit-linear-gradient(66deg, #de53f3 50%, #d345e8 50%);
+  }
   #footer .map-container .map-header h2 {
     float: none;
   }
@@ -1019,6 +1012,16 @@ html {
   }
   #mobile-menu-toggle {
     display: none;
+  }
+  #header.fixed-header .navigation {
+    position: fixed;
+    width: 100%;
+    z-index: 15;
+    top: 0;
+  }
+  #header.fixed-header .navigation .container .row .logo img {
+    position: static;
+    width: 50%;
   }
 }
 

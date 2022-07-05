@@ -214,6 +214,9 @@
                         span {
                             display: none;
                         }
+                        &.active-tab {
+                            background-image: -webkit-linear-gradient(66deg, $pink 50%, $dark-pink 50%);
+                        }
                     }
                 }
             }
@@ -498,4 +501,25 @@
 @media (min-width: 1200px) {
     #menu {display: none;}
     #mobile-menu-toggle {display: none;}
+
+    #header {
+        &.fixed-header {
+            .navigation {
+                position: fixed;
+                width: 100%;
+                z-index: 15;
+                top: 0;
+                .container {
+                    .row {
+                        .logo {
+                            img {
+                                position: static;
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

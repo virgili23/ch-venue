@@ -11,24 +11,6 @@ html {
 #header {
     text-transform: uppercase;
     font-family: 'Oswald';
-    &.fixed-header {
-        .navigation {
-            position: fixed;
-            width: 100%;
-            z-index: 15;
-            top: 0;
-            .container {
-                .row {
-                    .logo {
-                        img {
-                            position: static;
-                            width: 50%;
-                        }
-                    }
-                }
-            }
-        }
-    }
     #top-bar {
         background: white;
         height:45px;
