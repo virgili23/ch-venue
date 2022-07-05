@@ -974,6 +974,12 @@ html {
   #footer .social-container {
     margin-bottom: 40px;
   }
+  #footer .social-container .social-body .tab-navigation .tablink .fa-brands {
+    font-size: 2em;
+  }
+  #footer .social-container .social-body .tab-navigation .tablink span {
+    display: none;
+  }
   #footer .map-container .map-body a .content .map-pointer-container {
     height: 371px;
   }

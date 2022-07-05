@@ -403,6 +403,18 @@
         #footer {
             .social-container {
                 margin-bottom: 40px;
+                .social-body {
+                    .tab-navigation {
+                        .tablink {
+                            .fa-brands {
+                                font-size: 2em;
+                            }
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+                }
             }
             .map-container {
                 .map-body {
