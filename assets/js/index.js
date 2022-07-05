@@ -18,7 +18,6 @@ toggleBtn.onclick = function() {
 
 // Header Scroll
 $(function() {
-  //caches a jQuery object containing the header element
   const header = $("#header");
   $(window).scroll(function() {
       var scroll = $(window).scrollTop();

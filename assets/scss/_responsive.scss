@@ -142,10 +142,12 @@
 
     #events {
         padding-top: 95px;
-        .grid-header {
-            h1 {
-                float:none;
-                text-align:center;
+        .heading-container {
+            .grid-header {
+                h1 {
+                    float:none;
+                    text-align:center;
+                }
             }
         }
         .grid-body {
@@ -260,10 +262,12 @@
     }
     #events {
         padding-top: 95px;
-        .grid-header {
-            h1 {
-                float:none;
-                text-align:center;
+        .heading-container {
+            .grid-header {
+                h1 {
+                    float:none;
+                    text-align:center;
+                }
             }
         }
         .grid-body {
@@ -355,10 +359,12 @@
 @media (min-width: 768px) and (max-width: 991px) {
     #events {
         padding-top: 95px;
-        .grid-header {
-            h1 {
-                float:none;
-                text-align:center;
+        .heading-container {
+            .grid-header {
+                h1 {
+                    float:none;
+                    text-align:center;
+                }
             }
         }
         .grid-body {
@@ -420,10 +426,12 @@
 
     #events {
         padding-top: 95px;
-        .grid-header {
-            h1 {
-                float:none;
-                text-align:center;
+        .heading-container {
+            .grid-header {
+                h1 {
+                    float:none;
+                    text-align:center;
+                }
             }
         }
         .grid-body {
@@ -465,7 +473,7 @@
                     .tab-body {
                         .slide-container {
                             .slide-body {
-                                height: 143px;
+                                height: 163px;
                             }
                         }
                     }
@@ -484,7 +492,7 @@
                 a {
                     .content {
                         .map-pointer-container {
-                            height: 242px;
+                            height: 262px;
                             .address-block {
                                 top: 30%;
                                 left: 133px;
@@ -514,7 +522,7 @@
                         .logo {
                             img {
                                 position: static;
-                                width: 50%;
+                                width: 200px;
                             }
                         }
                     }

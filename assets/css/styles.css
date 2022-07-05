@@ -220,33 +220,38 @@ html {
 #events {
   background-color: #e5e5e5;
 }
-#events .grid-header h1 {
+#events .heading-container {
+  padding: 20px 0;
+  border-bottom: 2px solid black;
+}
+#events .heading-container .grid-header h1 {
   float: left;
   font-family: "Oswald";
   font-size: 2em;
   font-weight: 500;
+  margin-top: 10px;
 }
-#events .grid-header .icon {
+#events .heading-container .grid-header .icon {
   float: right;
 }
-#events .grid-header .icon .fa {
+#events .heading-container .grid-header .icon .fa {
   font-size: 32px;
 }
-#events .grid-header .icon .grid-icon {
+#events .heading-container .grid-header .icon .grid-icon {
   float: left;
   padding: 8px;
   cursor: pointer;
 }
-#events .grid-header .icon .grid-icon.active {
+#events .heading-container .grid-header .icon .grid-icon.active {
   background-color: #ffffff;
   color: #de53f3;
 }
-#events .grid-header .icon .list-icon {
+#events .heading-container .grid-header .icon .list-icon {
   float: left;
   padding: 8px;
   cursor: pointer;
 }
-#events .grid-header .icon .list-icon.active {
+#events .heading-container .grid-header .icon .list-icon.active {
   background-color: #ffffff;
   color: #de53f3;
 }
@@ -257,6 +262,8 @@ html {
   margin: 35px 0;
 }
 #events .grid-body .artists-container .artist-box {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   height: 450px;
   align-items: center;
@@ -522,6 +529,8 @@ html {
   font-family: "Oswald";
   text-transform: uppercase;
   font-size: 1.2em;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 #footer .social-container .social-body .social-tab .tab-header h3 a {
   text-decoration: none;
@@ -633,6 +642,7 @@ html {
   font-size: 13pt;
   text-transform: capitalize;
   letter-spacing: normal;
+  font-weight: 200;
 }
 #footer .map-container .map-body a {
   text-decoration: none;
@@ -807,7 +817,7 @@ html {
   #events {
     padding-top: 95px;
   }
-  #events .grid-header h1 {
+  #events .heading-container .grid-header h1 {
     float: none;
     text-align: center;
   }
@@ -883,7 +893,7 @@ html {
   #events {
     padding-top: 95px;
   }
-  #events .grid-header h1 {
+  #events .heading-container .grid-header h1 {
     float: none;
     text-align: center;
   }
@@ -936,7 +946,7 @@ html {
   #events {
     padding-top: 95px;
   }
-  #events .grid-header h1 {
+  #events .heading-container .grid-header h1 {
     float: none;
     text-align: center;
   }
@@ -970,7 +980,7 @@ html {
   #events {
     padding-top: 95px;
   }
-  #events .grid-header h1 {
+  #events .heading-container .grid-header h1 {
     float: none;
     text-align: center;
   }
@@ -993,13 +1003,13 @@ html {
     height: 17% !important;
   }
   #footer .social-container .social-body .social-tab .tab-body .slide-container .slide-body {
-    height: 143px;
+    height: 163px;
   }
   #footer .map-container .map-body .title h3 span {
     font-size: 12pt;
   }
   #footer .map-container .map-body a .content .map-pointer-container {
-    height: 242px;
+    height: 262px;
   }
   #footer .map-container .map-body a .content .map-pointer-container .address-block {
     top: 30%;
@@ -1021,7 +1031,7 @@ html {
   }
   #header.fixed-header .navigation .container .row .logo img {
     position: static;
-    width: 50%;
+    width: 200px;
   }
 }
 

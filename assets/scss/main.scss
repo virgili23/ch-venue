@@ -181,34 +181,39 @@ html {
 
 #events {
     background-color: $grey;
-    .grid-header {
-        h1 {
-            float: left;
-            font-family: 'Oswald';
-            font-size: 2em;
-            font-weight:500;
-        }
-        .icon {
-            float:right;
-            .fa {
-                font-size: 32px
-            }
-            .grid-icon {
+    .heading-container {
+        padding: 20px 0;
+        border-bottom: 2px solid black;
+        .grid-header {
+            h1 {
                 float: left;
-                padding:8px;
-                cursor: pointer;
-                &.active {
-                    background-color: $white;
-                    color: $pink;
-                }
+                font-family: 'Oswald';
+                font-size: 2em;
+                font-weight:500;
+                margin-top: 10px;
             }
-            .list-icon {
-                float:left;
-                padding:8px;
-                cursor: pointer;
-                &.active {
-                    background-color: $white;
-                    color: $pink;
+            .icon {
+                float:right;
+                .fa {
+                    font-size: 32px
+                }
+                .grid-icon {
+                    float: left;
+                    padding:8px;
+                    cursor: pointer;
+                    &.active {
+                        background-color: $white;
+                        color: $pink;
+                    }
+                }
+                .list-icon {
+                    float:left;
+                    padding:8px;
+                    cursor: pointer;
+                    &.active {
+                        background-color: $white;
+                        color: $pink;
+                    }
                 }
             }
         }
@@ -216,16 +221,15 @@ html {
 
     .grid-body {
         .artists-container {
-            // transition: $btnTransitions;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             column-gap: 10px;
             margin: 35px 0;
             .artist-box {
+                display: flex; 
+                flex-wrap: wrap;
                 width: 100%;
                 height: 450px;
-                // display: flex;
-                // justify-content: center;
                 align-items: center;
                 background: $white;
                 margin-bottom: 10px;
@@ -274,10 +278,6 @@ html {
                     .desc-box {
                         text-align: center;
                         margin-top: 20px;
-                        // position: relative;
-                        // top: 40%;
-                        // left: 50%;
-                        // transform: translate(-50%, -50%);
                         h2 {
                             text-transform: uppercase;
                             font-family: 'Oswald';
@@ -511,6 +511,8 @@ html {
                         font-family: 'Oswald';
                         text-transform: uppercase;
                         font-size: 1.2em;
+                        font-weight:400;
+                        letter-spacing: 1px;
                         a {
                            text-decoration: none;
                            color: $pink; 
@@ -631,6 +633,7 @@ html {
                         font-size: 13pt;
                         text-transform: capitalize;
                         letter-spacing: normal;
+                        font-weight: 200;
                     }
                 }
 
