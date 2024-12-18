@@ -23,11 +23,12 @@ I wanted to use PHP to show my skills with developing for a CMS (and to not have
 
 
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+    graph TD;
+    Setup --> Framework;
+    Framework --> Components;
+    Components --> Details;
+    Details --> Testing;
+    Testing --> Launch;
 ```
 <br/>
 <br/>
