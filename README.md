@@ -22,7 +22,32 @@ I wanted to use PHP to show my skills with developing for a CMS (and to not have
 # Mermaid Stuff!
 
 
-Hi there!
+```mermaid
+
+stateDiagram-v2
+    s2 : We can write in boxes!
+
+```
+
+<br/>
+<br/>
+<br/>
+
+
+
+
+```mermaid
+pie title Time spent on each sprint
+    "Framework" : 300
+    "Components" : 400
+    "Details" : 250
+
+```
+
+
+<br/>
+<br/>
+<br/>
 
 
 ```mermaid
@@ -35,29 +60,17 @@ Details --> Testing;
 Testing --> Launch;
 
 ```
-<br/>
-<br/>
-
-
-```mermaid
-
-journey
-    title My working day
-    section Go to work
-      Make tea: 6: Me
-      Go upstairs: 3: Me
-      Do work: 1: Me, Cat
-```
-
 
 <br/>
 <br/>
+<br/>
+
 
 
 ```mermaid
 
 xychart-beta
-    title "Sales Revenue"
+    title "CH Showtime Revenue"
     x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
     y-axis "Revenue (in $)" 4000 --> 11000
     bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
@@ -65,10 +78,3 @@ xychart-beta
 
 
 ```
-
-
-
-
-
-
-
